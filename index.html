@@ -75,18 +75,6 @@
                 transform: rotate(360deg);
             }
         }
-
-        /* Styling for displaying the payload */
-        .payload-display {
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: #f1f1f1;
-            border-radius: 8px;
-            font-size: 1rem;
-            color: #333;
-            word-wrap: break-word;
-            white-space: pre-wrap;
-        }
     </style>
 </head>
 <body>
@@ -103,23 +91,15 @@
         <div class="spinner"></div>
         
         <p class="success-message">Use Prismatik extension to complete checkout.</p>
-        
-        <!-- New section to display the base64 payload -->
-        <div id="payload-display" class="payload-display">
-            <!-- Payload content will be shown here -->
-        </div>
     </div>
 
     <script>
-        // Estrai il payload dalla URL senza ricaricare la pagina
-        const payload = window.location.pathname.slice(1); // Prende tutto dopo "/"
-        
-        // Aggiungi il payload alla barra degli indirizzi senza ricaricare la pagina
-        if (payload) {
-            history.pushState(null, null, "/"+payload); // Cambia la URL senza ricaricare la pagina
-            document.getElementById('payload-display').innerText = "Payload: " + payload; // Mostra il payload nella pagina
-        } else {
-            document.getElementById('payload-display').innerText = "No payload found."; // Se non c'è un payload
+        // Prendere l'URL dalla barra degli indirizzi
+        const urlPath = window.location.pathname;
+
+        // Modificare la barra degli indirizzi per mostrare sempre la stessa pagina, senza ricaricare
+        if (urlPath) {
+            history.pushState(null, null, urlPath); // Cambia solo la URL, senza fare reload della pagina
         }
     </script>
 </body>
