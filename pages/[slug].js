@@ -10,7 +10,7 @@ export default function SlugPage() {
     <div style={{ fontFamily: 'Arial, sans-serif', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column', textAlign: 'center', backgroundColor: '#f8f9fa' }}>
       <div style={{ maxWidth: '600px', padding: '2rem', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
         <div style={{ marginBottom: '2rem' }}>
-          <img src="https://i.ibb.co/8ghjgg45/kiwi.png" alt="Prismatik Logo" style={{ maxWidth: '200px', height: 'auto' }} />
+          <img src="/kiwi.png" alt="Prismatik Logo" style={{ maxWidth: '200px', height: 'auto' }} />
         </div>
         
         <h1 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#2d3748' }}>Cart secured!</h1>
@@ -29,4 +29,3 @@ export default function SlugPage() {
     </div>
   );
 }
-
