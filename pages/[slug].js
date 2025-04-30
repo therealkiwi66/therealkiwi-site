@@ -1,6 +1,8 @@
-export default function SlugPage() {
+import { useRouter } from 'next/router';
+
+export default function SlugPage({ slug }) {
   const router = useRouter();
-  
+
   return (
     <div className="container">
       <div className="content">
@@ -70,4 +72,17 @@ export default function SlugPage() {
       `}</style>
     </div>
   );
+}
+
+// Se vuoi usare dati dinamici in base al `slug`, usa getServerSideProps per il rendering lato server
+export async function getServerSideProps(context) {
+  const { slug } = context.params;
+
+  // Puoi fare qualcosa con il parametro `slug` qui, ad esempio chiamare un'API
+  // Restituisci il parametro slug come prop
+  return {
+    props: {
+      slug,
+    },
+  };
 }
