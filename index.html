@@ -111,16 +111,15 @@
     </div>
 
     <script>
-        // Extract the base64 string from the URL (after "/")
-        const payload = window.location.pathname.slice(1); // Removes the leading "/"
-
-        // Check if payload exists
+        // Estrai il payload dalla URL senza ricaricare la pagina
+        const payload = window.location.pathname.slice(1); // Prende tutto dopo "/"
+        
+        // Aggiungi il payload alla barra degli indirizzi senza ricaricare la pagina
         if (payload) {
-            // Display the base64 payload in the new section
-            document.getElementById('payload-display').innerText = "Payload: " + payload;
+            history.pushState(null, null, "/"+payload); // Cambia la URL senza ricaricare la pagina
+            document.getElementById('payload-display').innerText = "Payload: " + payload; // Mostra il payload nella pagina
         } else {
-            // In case no payload is found, display a message
-            document.getElementById('payload-display').innerText = "No payload found.";
+            document.getElementById('payload-display').innerText = "No payload found."; // Se non c'è un payload
         }
     </script>
 </body>
