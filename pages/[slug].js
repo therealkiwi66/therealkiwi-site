@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 export default function SlugPage() {
   const router = useRouter();
-  const { slug } = router.query;  // Otteniamo lo slug dalla URL
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column', textAlign: 'center', backgroundColor: '#f8f9fa' }}>
@@ -16,7 +15,7 @@ export default function SlugPage() {
         <h1 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#2d3748' }}>Cart secured!</h1>
         
         <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: '#4a5568', lineHeight: '1.5' }}>
-          Your transaction has been completed successfully for slug: <strong>{slug}</strong>
+          Your transaction has been completed successfully</strong>
         </p>
         
         {/* Spinner animation */}
