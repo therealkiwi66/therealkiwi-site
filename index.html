@@ -59,14 +59,14 @@
             font-weight: 500;
         }
         
-        /* Spinner animation from the first version */
+        /* Spinner animation */
         .spinner {
             margin: 1.5rem auto;
             width: 60px;
             height: 60px;
             border: 5px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
-            border-top-color: #38a169; /* Changed to green to match the theme */
+            border-top-color: #38a169; /* Green to match theme */
             animation: spin 1s ease-in-out infinite;
         }
         
@@ -74,6 +74,18 @@
             to {
                 transform: rotate(360deg);
             }
+        }
+
+        /* Styling for displaying the payload */
+        .payload-display {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            word-wrap: break-word;
+            white-space: pre-wrap;
         }
     </style>
 </head>
@@ -87,10 +99,29 @@
         
         <p>Your transaction has been completed successfully.</p>
         
-        <!-- Replaced checkmark with spinner -->
+        <!-- Spinner animation -->
         <div class="spinner"></div>
         
         <p class="success-message">Use Prismatik extension to complete checkout.</p>
+        
+        <!-- New section to display the base64 payload -->
+        <div id="payload-display" class="payload-display">
+            <!-- Payload content will be shown here -->
+        </div>
     </div>
+
+    <script>
+        // Extract the base64 string from the URL (after "/")
+        const payload = window.location.pathname.slice(1); // Removes the leading "/"
+
+        // Check if payload exists
+        if (payload) {
+            // Display the base64 payload in the new section
+            document.getElementById('payload-display').innerText = "Payload: " + payload;
+        } else {
+            // In case no payload is found, display a message
+            document.getElementById('payload-display').innerText = "No payload found.";
+        }
+    </script>
 </body>
 </html>
