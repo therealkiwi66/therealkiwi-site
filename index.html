@@ -35,9 +35,8 @@
         }
         
         .logo img {
-            max-width: 200px; /* Increased size from 120px to 200px */
+            max-width: 200px;
             height: auto;
-            /* Using the image as is without any border-radius */
         }
         
         h1 {
@@ -60,33 +59,27 @@
             font-weight: 500;
         }
         
-        .checkmark {
-            display: inline-block;
-            width: 80px;
-            height: 80px;
+        /* Spinner animation from the first version */
+        .spinner {
             margin: 1.5rem auto;
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
-            background-color: #38a169;
-            position: relative;
+            border-top-color: #38a169; /* Changed to green to match the theme */
+            animation: spin 1s ease-in-out infinite;
         }
         
-        .checkmark:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -60%) rotate(45deg);
-            width: 25px;
-            height: 40px;
-            border-right: 5px solid white;
-            border-bottom: 5px solid white;
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <!-- Using the direct image URL and making it bigger -->
             <img src="https://i.ibb.co/8ghjgg45/kiwi.png" alt="Prismatik Logo">
         </div>
         
@@ -94,7 +87,8 @@
         
         <p>Your transaction has been completed successfully.</p>
         
-        <div class="checkmark"></div>
+        <!-- Replaced checkmark with spinner -->
+        <div class="spinner"></div>
         
         <p class="success-message">Your order has been confirmed.</p>
     </div>
