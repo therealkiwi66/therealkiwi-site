@@ -35,8 +35,9 @@
         }
         
         .logo img {
-            max-width: 180px;
+            max-width: 200px; /* Increased size from 120px to 200px */
             height: auto;
+            /* Using the image as is without any border-radius */
         }
         
         h1 {
@@ -52,70 +53,50 @@
             line-height: 1.5;
         }
         
-        .redirect-message {
+        .success-message {
             margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #718096;
-        }
-        
-        .manual-link {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #4299e1;
-            text-decoration: none;
+            font-size: 1.2rem;
+            color: #38a169;
             font-weight: 500;
         }
         
-        .manual-link:hover {
-            text-decoration: underline;
-        }
-        
-        .spinner {
+        .checkmark {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
             margin: 1.5rem auto;
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
-            border-top-color: #4299e1;
-            animation: spin 1s ease-in-out infinite;
+            background-color: #38a169;
+            position: relative;
         }
         
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
+        .checkmark:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%) rotate(45deg);
+            width: 25px;
+            height: 40px;
+            border-right: 5px solid white;
+            border-bottom: 5px solid white;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <!-- Replace with your actual logo -->
-            <img src="/placeholder.svg?height=60&width=180" alt="Prismatik Logo">
+            <!-- Using the direct image URL and making it bigger -->
+            <img src="https://i.ibb.co/8ghjgg45/kiwi.png" alt="Prismatik Logo">
         </div>
         
         <h1>Thank You For Your Purchase!</h1>
         
         <p>Your transaction has been completed successfully.</p>
         
-        <div class="spinner"></div>
+        <div class="checkmark"></div>
         
-        <p class="redirect-message">You will be redirected automatically in a few seconds...</p>
-        
-        <a href="#" class="manual-link" id="redirectLink">Click here if you are not redirected automatically</a>
+        <p class="success-message">Your order has been confirmed.</p>
     </div>
-
-    <script>
-        // Set the URL you want to redirect to
-        const redirectUrl = "https://your-redirect-url.com";
-        
-        // Update the manual redirect link
-        document.getElementById("redirectLink").href = redirectUrl;
-        
-        // Redirect after 5 seconds
-        setTimeout(function() {
-            window.location.href = redirectUrl;
-        }, 5000);
-    </script>
 </body>
 </html>
