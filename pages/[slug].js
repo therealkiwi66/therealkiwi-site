@@ -15,7 +15,7 @@ export default function SlugPage() {
         <h1 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#2d3748' }}>Cart secured!</h1>
         
         <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: '#4a5568', lineHeight: '1.5' }}>
-          Your transaction has been completed successfully</strong>
+          Your transaction has been completed successfully
         </p>
         
         {/* Spinner animation */}
