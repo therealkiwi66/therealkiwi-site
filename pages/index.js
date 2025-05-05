@@ -1,15 +1,16 @@
 export default function Home() {
   return (
-    <div style={{
-      fontFamily: 'Arial, sans-serif',
-      textAlign: 'center',
-      padding: '40px',
-      backgroundColor: '#f8f9fa',
-      height: '100vh',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center'
-    }}>
+    <div
+      style={{
+        fontFamily: 'Arial, sans-serif',
+        textAlign: 'center',
+        backgroundColor: '#f8f9fa',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <a
         href="https://x.com/therealkiwi66"
         target="_blank"
