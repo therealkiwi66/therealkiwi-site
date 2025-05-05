@@ -1,10 +1,14 @@
 export default function Home() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center', padding: '40px' }}>
-      <h1 style={{ fontSize: '3rem', color: '#2ecc71' }}>THE REAL KIWI</h1>
-      <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
-        Benvenuto nel sito ufficiale della Kiwi Corporation™
-      </p>
+      <a
+        href="https://x.com/therealkiwi66"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: 'none' }}
+      >
+        <h1 style={{ fontSize: '3rem', color: '#2ecc71', marginBottom: '1rem' }}>therealkiwi</h1>
+      </a>
       <a
         href="/kiwi"
         style={{
@@ -16,7 +20,7 @@ export default function Home() {
           fontSize: '1rem',
         }}
       >
-        Vai alla pagina Kiwi
+        Checkout example
       </a>
     </div>
   );
