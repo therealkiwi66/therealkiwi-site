@@ -7,6 +7,12 @@ class MyDocument extends Document {
         <Head>
           {/* Aggiungi il link alla favicon */}
           <link rel="icon" href="/favicon.ico" />
+
+        <script
+            data-queue-fair-client="prismatikaio"
+            src="https://files.queue-fair.net/queue-fair-adapter.js"
+          ></script>
+              
         </Head>
         <body>
           <Main />
