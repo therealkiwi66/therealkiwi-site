@@ -1,28 +1,21 @@
-import { useRouter } from 'next/router';
-
-export default function SlugPage({ slug }) {
-  const router = useRouter();
-
+export default function SlugPage() {
   return (
-    <>
-      <img src="/prismatik-logo.png" alt="Prismatik Logo" />
+    <main style={{ textAlign: "center", padding: "40px", fontFamily: "Arial, sans-serif" }}>
+      <img
+        src="/prismatik-logo.png"
+        alt="Prismatik Logo"
+        style={{ maxWidth: "220px", marginBottom: "24px" }}
+      />
+
       <h1>Cart secured!</h1>
       <p>Your transaction has been completed successfully.</p>
       <p>Use Prismatik extension to complete checkout.</p>
-    </>
+    </main>
   );
 }
 
-export async function getServerSideProps(context) {
-  const slugParam = context.params?.slug;
-
-  const slug = Array.isArray(slugParam)
-    ? slugParam.join('/')
-    : slugParam || '';
-
+export async function getServerSideProps() {
   return {
-    props: {
-      slug,
-    },
+    props: {},
   };
 }
