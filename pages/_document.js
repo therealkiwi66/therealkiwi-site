@@ -8,11 +8,11 @@ class MyDocument extends Document {
           {/* Aggiungi il link alla favicon */}
           <link rel="icon" href="/favicon.ico" />
 
-        /* <script 
+    {/* <script 
             data-queue-fair-client="prismatikaio"
             src="https://files.queue-fair.net/queue-fair-adapter.js"
           ></script>
-             */ 
+             */ }
               
         </Head>
         <body>
